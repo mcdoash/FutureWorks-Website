@@ -16,13 +16,44 @@ div#container {
     background-size: cover;
 }
 
+nav {
+    width: 100%;
+    height: 70px;
+    top: 0;
+    position: fixed; /*temp*/
+    position: sticky; /*temp*/
+    position: -webkit-sticky; /*temp*/
+    z-index: 99;
+    background-color: #fff;
+}
+nav a {
+    width: 22%;
+    height: 100%;
+    line-height: 70px;
+    float: left;
+    display: inline-block;
+    font-family: "Berkshire Swash";
+    font-size: 1.75rem;
+    text-align: center;
+    text-decoration: none;
+    color: #0066cc;
+}
+nav a:first-child {
+    width: 10%;
+    margin-left: 2%;
+    padding: 0;
+}
+nav img {
+    width: 100%;
+}
+
 section {
     min-height: 100vh;
     padding: 5%;
 }
 
 /*Intro section*/
-section#into {
+section#intro {
     background-color: #e6f7ff;
     background: linear-gradient(to bottom right, #e6f7ff, #33bbff);
 }
