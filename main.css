@@ -9,11 +9,39 @@ div#container {
     width: 100%;
 }
 
+h1 {
+    font-size: 6vw;
+    font-family: "Kaushan Script";
+    letter-spacing: 5px;
+    line-height: 1.25;
+    text-align: center;
+    text-shadow: 4px 4px #fff;
+}
+p {
+    font-family: "Merriweather";
+    text-align: justify;
+    font-size: 1rem;
+}
+
 .parallax {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.button {
+    padding: 2% 4%;
+    font-family: "Merriweather";
+    text-decoration: none;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #f2f2f2;
+    background-color: #000;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 nav {
@@ -57,6 +85,24 @@ section#intro {
     background-color: #e6f7ff;
     background: linear-gradient(to bottom right, #e6f7ff, #33bbff);
 }
+header #left {
+    width: 40%;
+    float: left;
+}
+header img#product {
+    width: 100%;
+    margin: 0 auto;
+}
+header #right {
+    width: 55%;
+    height: 100%;
+    float: right;
+    text-align: center;
+}
+header h1 {
+    height: 50%;
+}
+
 
 /*About section*/
 section#about {
