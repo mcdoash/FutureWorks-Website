@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 20px;
+}
+div#container {
+    width: 100%;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section {
+    min-height: 100vh;
+    padding: 5%;
+}
+
+/*Intro section*/
+section#into {
+    background-color: #e6f7ff;
+    background: linear-gradient(to bottom right, #e6f7ff, #33bbff);
+}
+
+/*About section*/
+section#about {
+    background-image: url(images/image1.JPG);
+}
+
+/*Team section*/
+section#team {
+    background-color: #f2e6ff;
+}
+
+/*Artist section*/
+section#artists {
+    background-image: url(images/image2.JPG);
+}
+
+/*Contact section*/
+section#contact {
+    background-color: #ffe6ff;
+}
