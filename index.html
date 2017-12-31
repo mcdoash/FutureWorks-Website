@@ -137,6 +137,7 @@
             function changeSlides(n){
                 var slides = document.getElementsByClassName("slide");
                 var dots = document.getElementsByClassName("dot");
+                var backgrounds = ["image1", "image2", "image3"];
                 
                 if(n>slides.length){
                     slideIndex = 1;
@@ -153,6 +154,7 @@
                 }
                 slides[slideIndex-1].style.display = "block";
                 dots[slideIndex-1].className += " active";
+                document.getElementById("about").style.backgroundImage = "url(images/" + backgrounds[slideIndex-1] + ".JPG)"
             }
         </script>
     </body>
