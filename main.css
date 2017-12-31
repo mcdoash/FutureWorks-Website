@@ -52,6 +52,7 @@ nav {
     position: sticky; /*temp*/
     position: -webkit-sticky; /*temp*/
     z-index: 99;
+    box-shadow: 0 -10px 150px 5px #004466;
     background-color: #fff;
 }
 nav a {
@@ -71,9 +72,28 @@ nav a:first-child {
     margin-left: 2%;
     padding: 0;
 }
+nav a.active {
+    border-bottom: 5px solid #66b3ff;
+}
 nav img {
     width: 100%;
 }
+/*Scroll progress bar*/
+#progress-container {
+    width: 100%;
+    height: 10px;
+    top: 70px;
+    position: fixed; /*temp*/
+    position: sticky; /*temp*/
+    position: -webkit-sticky; /*temp*/
+    background-color: #ddd;
+}
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #66b3ff;
+}
+
 
 section {
     min-height: 100vh;
