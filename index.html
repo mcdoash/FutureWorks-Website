@@ -50,6 +50,37 @@
             
             
             <section id="about" class="parallax">
+                
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <h2>Who We Are</h2>
+                        <p class="dash">&boxh;&boxh;</p>
+                        <p>Nunc sit amet magna lorem. Fusce at eros vitae nisl efficitur pulvinar ac in lectus. Pellentesque sapien velit, egestas ut semper eu, facilisis id felis. Donec ligula urna, venenatis ac consequat sit amet, fermentum nec arcu. Sed porta lorem ac nisi elementum eleifend. Sed placerat semper leo, sed vehicula augue sodales non. Vestibulum sed sapien ac neque semper sagittis at non massa. In convallis quis ante et posuere. Aliquam porta magna quis efficitur pretium. Quisque sit amet iaculis felis. Cras tincidunt convallis semper.</p>
+                    </div>
+                    
+                    <div class="slide fade">
+                        <h2>Our Mission</h2>
+                        <p class="dash">&boxh;&boxh;</p>
+                        <p>Quisque non est odio. Maecenas scelerisque massa massa, in hendrerit velit interdum sit amet. Curabitur nec ligula sed nulla rhoncus scelerisque. Suspendisse euismod et lectus ut consectetur. In tempor sodales felis nec tempus. Pellentesque gravida posuere suscipit. Nulla venenatis dignissim lacinia.</p>
+                    </div>
+                    
+                    <div class="slide fade">
+                        <h2>Our Product</h2>
+                        <p class="dash">&boxh;&boxh;</p>
+                        <p>Vivamus sit amet nibh sed purus auctor elementum. Donec sit amet augue in elit elementum pretium. Mauris at varius nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum sagittis tortor ut purus eleifend rutrum. Sed dictum pulvinar urna. Sed quis urna vitae ligula congue volutpat. Aliquam bibendum enim eu quam posuere volutpat. Proin eu pretium quam. Donec vitae facilisis leo. Proin egestas consequat blandit. Donec tortor dolor, porta a dignissim eu, porta ac dui.</p>
+                    </div>
+                    
+                    <!--Prev/next buttons-->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                    <!--Slide dots-->
+                    <div style="text-align: center; margin-top: 2%;">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
             </section>
             
             <section id="team">
@@ -90,6 +121,38 @@
                 var amountScrolled = (windowScroll/height) * 100;
                 
                 document.getElementById("progress-bar").style.width = amountScrolled + "%";
+            }
+            
+            
+            /*Slideshow*/
+            var slideIndex = 1;
+            changeSlides(slideIndex);
+            
+            function plusSlides(n){
+                changeSlides(slideIndex+=n);
+            }
+            function currentSlide(n){
+                changeSlides(slideIndex=n);
+            }
+            function changeSlides(n){
+                var slides = document.getElementsByClassName("slide");
+                var dots = document.getElementsByClassName("dot");
+                
+                if(n>slides.length){
+                    slideIndex = 1;
+                }
+                else if(n<1){
+                    slideIndex = slides.length;
+                }
+                
+                for(var i=0; i<slides.length; i++){
+                    slides[i].style.display = "none";
+                }
+                for(var i=0; i<dots.length; i++){
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
             }
         </script>
     </body>
