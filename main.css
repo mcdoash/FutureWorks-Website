@@ -25,6 +25,14 @@ h2 {
     text-align: center;
     text-shadow: 2px 2px #fff;
 }
+h3 {
+    font-size: 1.75rem;
+    font-family: "Catamaran";
+    letter-spacing: 2px;
+    line-height: 1.25;
+    text-align: center;
+    text-shadow: 2px 2px #fff;
+}
 p {
     font-family: "Merriweather";
     text-align: justify;
@@ -33,9 +41,6 @@ p {
 
 .parallax {
     background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .button {
     padding: 2% 4%;
@@ -102,6 +107,10 @@ nav img {
 section {
     min-height: 100vh;
     padding: 5%;
+    box-shadow: 0 20px 150px #000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /*Intro section*/
@@ -199,8 +208,44 @@ p.dash {
 
 /*Team section*/
 section#team {
-    background-color: #f2e6ff;
+    background-image: url(images/image4.JPG);
 }
+.flex-holder {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.flex-item {
+    width: 45%;
+    margin: 2% auto;
+    padding: 2%;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    background-color: rgba(255,255,255,0.75)
+}
+.flex-item:hover {
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+}
+img.person {
+    width: 30%;
+    margin: 5% 2%;
+    display: inline-block;
+    float: left;
+    border-radius: 50%;
+}
+.member-text {
+    width: 65%;
+    margin-top: 5%;
+    display: inline-block;
+    float: right;
+}
+.member-text p, .member-text h3 {
+    margin-left: 7%;;
+    text-align: left;
+}
+
 
 /*Artist section*/
 section#artists {
@@ -209,5 +254,5 @@ section#artists {
 
 /*Contact section*/
 section#contact {
-    background-color: #ffe6ff;
+    background-image: url(images/image5.JPG);
 }
