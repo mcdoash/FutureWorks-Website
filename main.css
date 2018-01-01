@@ -126,18 +126,20 @@ section#intro {
     background-color: #e6f7ff;
     background: linear-gradient(to bottom right, #e6f7ff, #33bbff);
 }
-header #left {
+header #right {
     width: 40%;
-    float: left;
+    float: right;
 }
 header img#product {
     width: 100%;
     margin: 0 auto;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
 }
-header #right {
+header #left {
     width: 55%;
     height: 100%;
-    float: right;
+    padding: 10% 0;
+    float: left;
     text-align: center;
 }
 header h1 {
