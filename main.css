@@ -10,7 +10,7 @@ div#container {
 }
 
 h1 {
-    font-size: 6vw;
+    font-size: 7vw;
     font-family: "Kaushan Script";
     letter-spacing: 5px;
     line-height: 1.25;
@@ -110,27 +110,26 @@ hr.nav-anchor {
 
 /*Intro section*/
 section#intro {
+    padding-left: 1%;
+    z-index: 1;
     background-color: #e6f7ff;
     background: linear-gradient(to bottom right, #ced7fd, #5374f8);
 }
-header #right {
-    width: 40%;
-    float: right;
-}
-header img#product {
-    width: 100%;
-    margin: 0 auto;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
-}
-header #left {
+header #header-text {
     width: 55%;
     height: 100%;
     padding: 10% 0;
     float: left;
     text-align: center;
 }
-header h1 {
-    height: 50%;
+header img#product {
+    width: auto;
+    height: 75vh;
+    margin: 0 auto;
+    z-index: -1;
+    position: absolute;
+    right: 5%;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
 }
 
 
@@ -313,4 +312,62 @@ img.artist {
 /*Contact section*/
 section#contact {
     background-image: url(images/image5.jpg);
+}
+
+
+/*Media queries*/
+@media only screen and (max-width: 1024px) {
+    section#intro {
+        padding: 0;
+    }
+    header #header-text {
+        width: 100%;
+        padding: 2% 0;
+    }
+    header h1 {
+        font-size: 12vw;
+    }
+    header img#product{
+        height: 45vh;
+        left: 0;
+        right: 0;
+        bottom: 7%;
+    }
+    .slideshow-container {
+        width: 75%;
+    }
+    #members-container {
+        width: 75%;
+    }
+    .art-container {
+        width: 37%; 
+    }
+}
+@media only screen and (max-width: 800px) {
+    section#intro {
+        padding: 5% 0;
+    }
+    .slideshow-container {
+        width: 95%;
+    }
+    #members-container {
+        width: 95%;
+    }
+    .art-container {
+        width: 50%; 
+    }
+}
+@media only screen and (max-width: 500px){
+    section {
+        padding: 10% 0;
+    }
+     .slideshow-container {
+        width: 100%;
+    }
+    #members-container {
+        width: 100%;
+    }
+    .art-container {
+        width: 90%; 
+    } 
 }
